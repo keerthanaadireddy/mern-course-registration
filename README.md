@@ -45,42 +45,53 @@ mern-course-registration/
 │── README.md
 │── .gitignore
 
-yaml
-Copy code
-
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the repository
-git clone https://github.com/<your-username>/mern-course-registration.git
-cd mern-course-registration
+git clone https://github.com/<your-username>/mern-course-registration
+
+git cd mern-course-registration
 ### 2. Setup Backend
+
+```bash
 cd backend
 npm install
 
-Create a .env file inside backend/
+
+Create a `.env` file inside `backend/` with the following:
+
+```env
 MONGO_URI=your-mongodb-connection-string
 PORT=5000
 
-Run backend 
+Run the backend:
+
+```bash
 npm start
+
 
 ### 3. Setup Frontend
+
+```bash
 npm install
 npm start
-The React app will start at 👉 http://localhost:3000
+
+---
 
 ## 📡 API Endpoints
-Base URL: http://localhost:5000/api/courses
 
-Method	Endpoint	Description
-GET	/		Get all courses
-POST	/		Create a new course
-PUT	/:id		Update a course by ID
-DELETE	/:id		Delete a course by ID
+Base URL: `http://localhost:5000/api/courses`
 
-## Course Schema
+- **GET /** → Get all courses  
+- **POST /** → Create a new course  
+- **PUT /:id** → Update a course by ID  
+- **DELETE /:id** → Delete a course by ID  
+
+## 📘 Course Schema
+
+```json
 {
   "code": "CS101",
   "name": "Intro to Computer Science",
@@ -88,6 +99,7 @@ DELETE	/:id		Delete a course by ID
 }
 
 ## 🚀 Future Improvements
-Add user authentication (JWT).
-Pagination and search for courses.
-Add tests for APIs and frontend components.
+
+- Add user authentication (JWT)  
+- Implement pagination and search for courses  
+- Add tests for APIs and frontend components  
